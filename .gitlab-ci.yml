@@ -10,7 +10,7 @@ build-master:
   script:
     - docker build --build-arg UPSTREAM_TAG=$UPSTREAM_TAG --pull -t "$CI_REGISTRY_IMAGE" .
     - docker push "$CI_REGISTRY_IMAGE"
-    - docker tag "CI_REGISTRY_IMAGE"  "$CI_REGISTRY_IMAGE:$UPSTREAM_TAG"
+    - docker tag "$CI_REGISTRY_IMAGE"  "$CI_REGISTRY_IMAGE:$UPSTREAM_TAG"
     - docker push "$CI_REGISTRY_IMAGE:$UPSTREAM_TAG"
   only:
     - master
