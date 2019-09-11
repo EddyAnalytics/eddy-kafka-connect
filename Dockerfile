@@ -1,6 +1,8 @@
-FROM strimzi/kafka-connect:0.11.4-kafka-2.1.0
+ARG UPSTREAM_TAG=0.13.0-kafka-2.3.0
+
+FROM strimzi/kafka:$UPSTREAM_TAG
 USER root:root
-RUN mkdir plugins && \
+RUN mkdir /opt/kafka/plugins && \
     curl https://repo1.maven.org/maven2/io/debezium/debezium-connector-mysql/0.9.5.Final/debezium-connector-mysql-0.9.5.Final-plugin.tar.gz | \
-        tar -zx -C plugins
+        tar -zx -C /opt/kafka/plugins
 USER 1001
