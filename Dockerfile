@@ -1,4 +1,4 @@
-ARG UPSTREAM_TAG=0.13.0-kafka-2.3.0
+ARG UPSTREAM_TAG=0.14.0-kafka-2.3.0
 
 FROM strimzi/kafka:$UPSTREAM_TAG
 USER root:root
