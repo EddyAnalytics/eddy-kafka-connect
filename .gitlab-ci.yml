@@ -1,5 +1,5 @@
 variables:
-  UPSTREAM_TAG: 0.18.0-kafka-2.5.0
+  UPSTREAM_TAG: 0.22.0-kafka-2.7.0
 
 build-master:
   # Official docker image.
